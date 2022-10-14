@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:padding="16dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        android:padding="24dp"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="87dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/pizza" />
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstname_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="@string/hint_firstname"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/firstname_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastname_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="@string/hint_lastname"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lastname_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="@string/hint_address"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="25dp">
+        <TextView
+            android:id="@+id/txt_pizza_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8A2BE2"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="@string/pizza_select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup1"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="34dp"
+            android:checkedButton="1">
+        <CheckBox
+            android:id="@+id/small_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/pizza_small"/>
+        <CheckBox
+            android:id="@+id/medium_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/pizza_medium"/>
+        <CheckBox
+            android:id="@+id/large_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/pizza_large"/>
+    </RadioGroup>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+            <TextView
+                android:id="@+id/pizza_topping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#8A2BE2"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="@string/topping_select"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="34dp"
+                android:checkedButton="1"
+                >
+        <CheckBox
+            android:id="@+id/pepperoni_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/topping_1"/>
+        <CheckBox
+            android:id="@+id/mushroom_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/topping_2"/>
+            <CheckBox
+                android:id="@+id/bacon_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/topping_3"/>
+            <CheckBox
+                android:id="@+id/extra_cheese_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/topping_4"/>
+            <CheckBox
+                android:id="@+id/tomato_and_basil_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/topping_5"/>
+            <CheckBox
+                android:id="@+id/pesto_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/topping_6"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/send_order"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PizzaApp</string>
+    <string name="hint_firstname">Firstname</string>
+    <string name="hint_lastname">Lastname</string>
+    <string name="hint_address">Address</string>
+    <string name="pizza_medium"> Medium </string>
+    <string name="pizza_small"> Small </string>
+    <string name="pizza_large"> Large </string>
+    <string name="topping_1"> Pepperoni </string>
+    <string name="topping_2"> Mushrooms </string>
+    <string name="topping_3"> Bacon </string>
+    <string name="topping_4"> Extra Cheese, Cheese, And More Cheese </string>
+    <string name="topping_5"> Tomato and Basil </string>
+    <string name="topping_6"> Pesto </string>
+    <string name="pizza_select">Select A pizza</string>
+    <string name="topping_select">Toppings</string>
+    <string name="send_order"> Order Now </string>
+
+</resources>
